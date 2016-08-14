@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>practice form</title>
+</head>
+<body>
+<form name="Cities" action="success.html" method="post">
+  <fieldset>
+    <div>
+      <label>Full name:</label>
+      <input type="text" name="fullname">
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email">
+    </div>
+
+    <div>
+      <label>Password:</label>
+      <input type="password" name="password">
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <div>
+      <label>Favourite city:</label>
+      <select name="city">
+        <option value="city">San Francisco</option>
+        <option value="city">Paris</option>
+        <option value="city">Barcelona</option>
+      </select>
+    </div>
+
+    <div>
+     <textarea name="textarea" rows="3" cols="25">Write the exact address</textarea>
+    </div>
+
+    <div>    
+      <label>Choose a date:</label>
+      <input type="date" name="date">
+    </div>
+
+    <div>
+      <input type="checkbox" name="teleportation-agree" value="agree">
+      I am prepared to teleport into this city.
+    </div>
+  </fieldset>
+  
+  <button type="submit">Save this adventure</button>
+</form>
+</body>
+</html>
