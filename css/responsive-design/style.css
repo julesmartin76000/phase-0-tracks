@@ -3,6 +3,7 @@ blockquote {
   padding: 15px;
   margin-left: 0px;
 }
+
 body {
   max-width: 960px;
 }
@@ -23,6 +24,7 @@ cite {
   width: 20%;
   display: inline-block;
   padding-right : 30px;
+  left:0px;
 }
 
 main {
