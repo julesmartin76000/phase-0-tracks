@@ -4,7 +4,7 @@ blockquote {
   margin-left: 0px;
 }
 body {
-  width: 960px;
+  max-width: 960px;
 }
 
 cite {
@@ -20,15 +20,17 @@ cite {
 #external-links {
   vertical-align: top;
   position: relative;
-  width: 200px;
+  width: 20%;
   display: inline-block;
+  padding-right : 30px;
 }
 
 main {
   vertical-align: top;
   position: relative;
   display: inline-block;
-  width: 756px;
+  width: 70%;
+  min-width: 300px;
 }
 
 /* you're welcome to edit the
@@ -47,3 +49,16 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media screen and (max-width: 500px) {
+  main {
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  img {
+    width: 50%;
+  }
+}
+
