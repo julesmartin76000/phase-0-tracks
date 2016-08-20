@@ -1,12 +1,28 @@
 #contact-info {
 font-size: 0.8em;
 }
-#job {
+
+/* mouse over link */
+h2:hover {
+	color: #FF00FF
+}
+
+li {
+	background-color: #A52A2A;
+	color:white;
+}
+
+ul > li {
+	font-style: italic;
+	}
+
+.job {
 	background-color: #e9e5dc;
 	border-style: round;
 	padding:10px ;
 	margin-bottom: 5px;
 }
+
 ul {
 	font-size: .8em;
 }
