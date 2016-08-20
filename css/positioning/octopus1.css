@@ -1,0 +1,13 @@
+.octohat {
+  position: relative;
+}
+
+#octopus{
+  
+}
+
+#glasses {
+	position: absolute;
+	top :0px;
+    left: 30px;
+}
