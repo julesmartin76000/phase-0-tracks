@@ -1,0 +1,18 @@
+#glasses.png {
+	position: relative;
+ }
+
+#hat.png {
+
+}
+
+
+ * { background-color: #e9e5dc;
+ }
+
+ #octopus.png {
+	top: 15px;
+    left: 50px;
+    background-color: #e9e5dc;
+    position: absolute;
+}
