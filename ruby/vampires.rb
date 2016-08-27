@@ -1,3 +1,5 @@
+puts "How many employees will be processed ?"
+employee = gets.chomp.to_i
 puts "what is your name ?"
 name =gets.chomp
 puts "what is the current year ?"
@@ -11,6 +13,13 @@ garlic_bread =gets.chomp
 puts "Would you like to enroll in the company’s health insurance ? (y/n)"
 insurance =gets.chomp
 
+
+if name =="Drake Cula"
+	true_name= false 
+elsif name == "Tu Fang"
+	true_name= false
+else true_name= true
+end 
 
 if age == year - born
 	wolves_live_less=true
