@@ -1,0 +1,13 @@
+Write the algorithm for using an elevator.
+
+Enter into the elevator
+Push a button
+	if the floor is higher than your personnal floor, push one button below
+	otherwise push the button above
+Leave the elevator
+
+Write the algorithm for making a survey.
+
+Take the survey
+fill out the survey
+until X persons have filled out the survey, give the survey.
