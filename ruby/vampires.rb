@@ -65,9 +65,16 @@ while i<=employee
 		puts "Probably a vampire."
 	elsif 
 		puts "Almost certainly a vampire."
+	else name 
+		puts "Almost certainly a vampire."
 	end 
 i+=1 
 end
 
-puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+puts "Name : #{name} "
+puts "Age : #{age}"
+puts "DO you want some garlic breads ? :#{garlic_bread}"
+puts "Do you have any allergies ? :#{allergies}"
+puts "Do you want an insurance ? :#{insurance}"
 
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
