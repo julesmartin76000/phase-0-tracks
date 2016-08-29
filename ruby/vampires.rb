@@ -1,8 +1,10 @@
 puts "How many employees will be processed ?"
 employee = gets.chomp.to_i
+
 i=1
 while i<=employee 
-puts "what is your name ?"
+
+	puts "what is your name ?"
 	name =gets.chomp
 	puts "what is the current year ?"
 	year =gets.chomp.to_i
@@ -16,6 +18,14 @@ puts "what is your name ?"
 	insurance =gets.chomp
 
 
+
+	if name =="Drake Cula"
+		true_name= false 
+	elsif name == "Tu Fang"
+		true_name= false
+	else true_name= true
+	end 
+	
 	if age == year - born
 		wolves_live_less=true
 	else
@@ -34,12 +44,37 @@ puts "what is your name ?"
 		wolves_need_insurance = false
 	end
 	
+	sunshine = FALSE
+
+	until sunshine
+		puts "Do you have any allergie ? (one at a time, type done when finished)"
+		
+		allergies = gets.chomp
+		if allergies == "done"
+		sunshine = true
+		puts "We have recorded your informations"
+		elsif allergies == "sunshine"
+		sunshine = true 
+		else 
+		end
+	end 
+
 	if wolves_live_less && wolves_like_garlic && wolves_need_insurance
 		puts "Probably not a vampire."
-	elsif wolves_like_garlic || wolves_need_insurance
+	elsif wolves_like_garlic || wolves_need_insurance || sunshine
 		puts "Probably a vampire."
 	elsif 
+		puts "Almost certainly a vampire."
+	else name 
 		puts "Almost certainly a vampire."
 	end 
 i+=1 
 end
+
+puts "Name : #{name} "
+puts "Age : #{age}"
+puts "DO you want some garlic breads ? :#{garlic_bread}"
+puts "Do you have any allergies ? :#{allergies}"
+puts "Do you want an insurance ? :#{insurance}"
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
