@@ -6,3 +6,17 @@ def your_name
 end
 
 your_name {|first_name, last_name| puts "Okay, so your full name is #{first_name} #{last_name}"} 
+
+
+colours = {"blue" => 'sky', "red" => 'blood', "green" => 'apple'}
+
+colours.each do |colour, word|
+	p "#{colour} is for #{word}"
+end
+
+colours = ["blue", "red", "green"]
+
+colours.map! do |colour|
+	puts colour 
+	colour.upcase 
+end 
