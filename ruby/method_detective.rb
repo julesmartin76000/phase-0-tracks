@@ -4,17 +4,32 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-# "iNvEsTiGaTiOn".<???>
+# "iNvEsTiGaTiOn".downcase
+def investigation(str)
+  index = 0
+  # declare empty string we will add to
+  investigation_str = ""
+  # loop over the string's letters
+  while index < str.length
+    if index.odd?
+      investigation_str += str[index].upcase
+    else
+      investigation_str += str[index].downcase
+    end
+    index += 1
+  end
+  puts investigation 
+end
 # => “InVeStIgAtIoN”
 
 # "zom".<???>
 # => “zoom”
 
-# "enhance".<???>
+# "enhance".ljust(integer, padstr=' ')
 # => "    enhance    "
 
-# "Stop! You’re under arrest!".<???>
-# => "STOP! YOU’RE UNDER ARREST!"
+ "Stop! You’re under arrest!".upcase
+ => "STOP! YOU’RE UNDER ARREST!"
 
 # "the usual".<???>
 #=> "the usual suspects"
@@ -31,8 +46,8 @@
 # "Elementary,    my   dear        Watson!".<???>
 # => "Elementary, my dear Watson!"
 
-# "z".<???>
-# => 122 
+ "z".ord
+ => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
 # "How many times does the letter 'a' appear in this string?".<???>
