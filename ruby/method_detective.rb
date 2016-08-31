@@ -4,12 +4,12 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-# "iNvEsTiGaTiOn".downcase
+# "iNvEsTiGaTiOn".<???>
 def investigation(str)
   index = 0
-  # declare empty string we will add to
+  
   investigation_str = ""
-  # loop over the string's letters
+ 
   while index < str.length
     if index.odd?
       investigation_str += str[index].upcase
@@ -18,32 +18,42 @@ def investigation(str)
     end
     index += 1
   end
-  puts investigation 
+  investigation_str
 end
+
+
+name = "iNvEsTiGaTiOn"
+
+puts investigation(name)
 # => “InVeStIgAtIoN”
+# voir si c'est possible avec gsub
 
-# "zom".<???>
+"zom".gsub(/[o]/, 'o' => 'oo')  
 # => “zoom”
-
-# "enhance".ljust(integer, padstr=' ')
-# => "    enhance    "
+  
+"enhance".center(20, '    ')
+=> "    enhance    "
 
  "Stop! You’re under arrest!".upcase
  => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+ "the usual".replace "the usual suspects"
 #=> "the usual suspects"
+#essayer de trouver une autre méthode quand même
 
-# " suspects".<???>
+" suspects".insert(0, 'the usual')
 # => "the usual suspects"
 
-# "The case of the disappearing last letter".<???>
-# => "The case of the disappearing last lette"
+
+"The case of the disappearing last letter".chomp("r")
+=> "The case of the disappearing last lette"
+#also work with .chop
 
 # "The mystery of the missing first letter".<???>
 # => "he mystery of the missing first letter"
+revoir comment marche .delete
 
-# "Elementary,    my   dear        Watson!".<???>
+# "Elementary,    my   dear        Watson!". avec Center ??
 # => "Elementary, my dear Watson!"
 
  "z".ord

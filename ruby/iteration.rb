@@ -20,3 +20,14 @@ colours.map! do |colour|
 	puts colour 
 	colour.upcase 
 end 
+
+#release 2
+
+def less
+puts "Give two numbers which are less than 5"
+	number_1=gets.chomp.to_i
+	number_2=gets.chomp.to_i
+	if 
+
+
+
