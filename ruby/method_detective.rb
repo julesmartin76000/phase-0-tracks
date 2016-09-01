@@ -38,6 +38,8 @@ puts investigation(name)
  => "STOP! YOU’RE UNDER ARREST!"
 
  "the usual".replace "the usual suspects"
+ or 
+ "the usual" << " suspects"
 #=> "the usual suspects"
 #essayer de trouver une autre méthode quand même
 
