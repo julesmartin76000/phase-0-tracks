@@ -7,15 +7,15 @@ puts "What is the fur color ?"
 fur = gets.chomp
 puts "Is the hamster a good candidate for adoption? (yes/no)"
 candidate = gets.chomp
-puts "Estimated age of hamster"
+puts "Estimated age of hamster: "
 age= gets.chomp.to_i
-if age == "".to_i
+if age == ""
 	then age = nil
 end
 
 puts "Hamster's data"
 puts "Hamster's name is #{name}"
 puts "Hamster's volume is #{volume}"
-puts "Flur color is #{colour}"
-puts "Is the hamster a good candidate for adoption? (yes/no) "
-puts "Hamster's age is #{}"
+puts "Fur color is #{fur}"
+puts "Hamster's age is #{age}"
+puts "Is the hamster a good candidate for adoption? : #{candidate} "
