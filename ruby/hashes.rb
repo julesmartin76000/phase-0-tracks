@@ -1,4 +1,3 @@
-
 puts "What is your name ?"
 name = gets.chomp
 
@@ -12,10 +11,10 @@ puts "choose a decor theme "
 theme = gets.chomp
 
 designer_application = {
-	'Name': "#{name}",
-	'Age': "#{age}",
-	'Number of children': "#{children}",
-	'Theme choosen': "#{theme}"
+	Name_1: "#{name}",
+	Age: "#{age}",
+	Number_of_children: "#{children}",
+	Theme_choosen: "#{theme}"
 }
 
 puts "Do you want to update something ? (yes/no)"
@@ -26,17 +25,17 @@ else
 	puts "What do you want to change ?"
 	change = gets.chomp
 	case change
-		when name 
-		puts "Again, what is your name ?"
-		designer_application['Name':]=  gets.chomp
+		when "name" then puts "Again, what is your name ?"
+		designer_application[:Name_1] =  gets.chomp.to_sym 
 		when age
 		puts 
 		when children
 		puts 
 		when theme 
 		else 
+			puts "I did not understand. Choose between name, age, number of children, theme"
 	end
-	
+	puts designer_application
 end 
 
 
