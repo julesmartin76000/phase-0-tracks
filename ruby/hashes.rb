@@ -27,11 +27,12 @@ else
 	case change
 		when "name" then puts "Again, what is your name ?"
 		designer_application[:Name_1] =  gets.chomp.to_sym 
-		when age
-		puts 
-		when children
-		puts 
-		when theme 
+		when "age" then puts "Again, how old are you ?"
+		designer_application[:Age] = gets.chomp.to_sym
+		when "number of children" then puts "Again, How many children do you have ?"
+		designer_application[:Number_of_children] = gets.chomp.to_sym
+		when "theme"  then puts "Again, Choose a decor theme please."
+		designer_application[:Theme_choosen] = gets.chomp.to_sym
 		else 
 			puts "I did not understand. Choose between name, age, number of children, theme"
 	end
