@@ -1,5 +1,5 @@
 def vowel_adv(str)
-#create 2 arrays, one with the vowels, the other with the consoants
+#create 2 arrays, one with the vowels, the other with the consonants
   vowels = ["a", "e", "i", "o", "u", "a", " ", " "]
   consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
   

@@ -25,11 +25,11 @@ end
 name = "iNvEsTiGaTiOn"
 
 puts investigation(name)
-# => “InVeStIgAtIoN”
-# voir si c'est possible avec gsub
+=> “InVeStIgAtIoN”
+
 
 "zom".gsub(/[o]/, 'o' => 'oo')  
-# => “zoom”
+=> “zoom”
   
 "enhance".center(20, '    ')
 => "    enhance    "
@@ -40,27 +40,29 @@ puts investigation(name)
  "the usual".replace "the usual suspects"
  or 
  "the usual" << " suspects"
-#=> "the usual suspects"
-#essayer de trouver une autre méthode quand même
+=> "the usual suspects"
+
 
 " suspects".insert(0, 'the usual')
-# => "the usual suspects"
+ => "the usual suspects"
 
 
 "The case of the disappearing last letter".chomp("r")
 => "The case of the disappearing last lette"
 #also work with .chop
 
-# "The mystery of the missing first letter".<???>
-# => "he mystery of the missing first letter"
-revoir comment marche .delete
+cut = "The mystery of the missing first letter"
+cut.slice!(0)
+cut
+=> "he mystery of the missing first letter"
 
-# "Elementary,    my   dear        Watson!". avec Center ??
+# "Elementary,    my   dear        Watson!".<???>
+
 # => "Elementary, my dear Watson!"
 
  "z".ord
  => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
-# "How many times does the letter 'a' appear in this string?".<???>
-# => 4
+"How many times does the letter 'a' appear in this string?".count("a")
+ => 4
