@@ -42,7 +42,7 @@ def add_item(list, item_name, quanity = 1)
 end
 
 def remove_item(list,item_name)
-list.delete[item_name] 
+list.delete(item_name) 
 end
 
 def update_quanity(list, item_name, quanity)
@@ -60,3 +60,13 @@ jules_gorcery_list = new_grocery_list("Lemonade Tomatoes Onions Ice_Cream")
 update_quanity(jules_gorcery_list, "Lemonade", 2)
 update_quanity(jules_gorcery_list, "Tomatoes", 3)
 update_quanity(jules_gorcery_list, "Ice_Cream", 4)
+remove_item(jules_gorcery_list, "Lemonade")
+update_quanity(jules_gorcery_list, "Ice_Cream", 1)
+print_pretty(jules_gorcery_list)
+
+What did you learn about pseudocode from working on this challenge?
+What are the tradeoffs of using arrays and hashes for this challenge?
+What does a method return?
+What kind of things can you pass into methods as arguments?
+How can you pass information between methods?
+What concepts were solidified in this challenge, and what concepts are still confusing?
