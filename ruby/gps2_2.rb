@@ -27,3 +27,36 @@
 # input: the list we are using
 # steps: use iteration to make it look pretty
 # output: final updated list
+  
+def new_grocery_list(items)
+    list = {}
+    array_of_items = items.split(" ")
+    array_of_items.each do |item|
+        list[item] = 1
+end
+list 
+end
+
+def add_item(list, item_name, quanity = 1)
+    list[item_name] = quanity
+end
+
+def remove_item(list,item_name)
+list.delete[item_name] 
+end
+
+def update_quanity(list, item_name, quanity)
+    list[item_name] = quanity 
+end
+
+def print_pretty(list)
+    puts "Grocery List"
+    list.each do |item,quantity| 
+        puts "I need #{quantity} of #{item}"
+    end
+end
+
+jules_gorcery_list = new_grocery_list("Lemonade Tomatoes Onions Ice_Cream")
+update_quanity(jules_gorcery_list, "Lemonade", 2)
+update_quanity(jules_gorcery_list, "Tomatoes", 3)
+update_quanity(jules_gorcery_list, "Ice_Cream", 4)
