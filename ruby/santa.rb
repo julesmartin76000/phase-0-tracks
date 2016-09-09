@@ -26,7 +26,7 @@ def get_mad_at(reindeer_name)
 	reindeer_name = reindeer_ranking[-1]
 end 
 
-#getter methods for attribute
+#getter methods for attribute : making private data publicly available outside the class
 #def gender 
 #	@gender 
 #end
@@ -80,3 +80,5 @@ santas << Santa.new("N/A", "N/A")
 #changes done in the class
 
 #release 4
+
+utiliser un truc du type .shuffle avec example_genders (leur 2ième solution marche pas)
