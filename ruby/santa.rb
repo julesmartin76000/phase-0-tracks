@@ -1,12 +1,14 @@
 class Santa
 
-attr_reader :ethnicity,
-attr_accessor :gender,
+attr_reader :ethnicity
+attr_accessor :gender, :age, :name 
 
-def initialize(gender, ethnicity)
+def initialize(name, gender, ethnicity)
 	puts "Initializing Santa instance ..."
 	@gender = gender
 	@ethnicity = ethnicity
+	@age = 0
+	@name = name 
 end
 
 def speak
@@ -17,14 +19,20 @@ def eat_milk_and_cookies(cookies)
 	puts "That was a good #{cookies}!"
 end  
 
-def celebrate_birthday(age)
-	age +=1 
+def celebrate_birthday
+	@age +=1 
 end
 
 def get_mad_at(reindeer_name)
 	reindeer_name = reindeer_ranking("reindeer_name")
 	reindeer_name = reindeer_ranking[-1]
 end 
+
+end
+# def get_mad_at(reindeer)
+  #  @reindeer_ranking.delete(reindeer)
+  #  @reindeer_ranking << reindeer
+ # end
 
 #getter methods for attribute : making private data publicly available outside the class
 #def gender 
@@ -49,10 +57,7 @@ end
 #santa_1.speak
 
 #release 1
-reindeer_ranking=["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-age = 0
-
-
+#user data
 
 santas = []
 santas << Santa.new("agender", "black")
@@ -80,5 +85,19 @@ santas << Santa.new("N/A", "N/A")
 #changes done in the class
 
 #release 4
+# user data
 
-utiliser un truc du type .shuffle avec example_genders (leur 2ième solution marche pas)
+santas = []
+reindeer_ranking=["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_genders.length.times do |i|
+  santas << Santa.new(reindeer_ranking.sample, example_genders.sample, example_ethnicities.sample)
+      santas[i - 1].age = rand(140)
+    
+
+ puts "Name: #{santas[i - 1].name}"
+  puts "Ethnicity: #{santas[i - 1].ethnicity}"
+  puts "Gender: #{santas[i - 1].gender}"
+  puts "Age: #{santas[i - 1].age}"
+  end
