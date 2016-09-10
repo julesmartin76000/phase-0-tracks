@@ -1,34 +1,33 @@
 # game class
 
 class WordGame
-  attr_reader :guess_word
-	
+  attr_accessor :secret_word
+  attr_reader :guess_count
+  
   def initialize
-    @secret_word = "unicorn"
-    @secret_word = @secret_word.split('')
+    @secret_word = secret_word
+    @guess_count = 2
   end
   
  def letter_match?(letter)
     if @secret_word.include?(letter)
-      return true; end
-    return false
+      return true
+    else return false
+    end
+  end
+  
+  def require_word
   end
 
 end
 
 # user interface
 
-puts "Welcome to the Word Game!"
-game = WordGame.new
-p game
-
+puts "Welcome to the Hangman game"
+game = WordGame.new 
 puts "Pick a word randomly please"
-guess = gets.chomp 
-guess = guess.split('')
-
-#each letter in the string input should match with the letter into the secret word, whatever its place. 1/ compare each letter 
-if guess = game 
-end
+game.secret_word = gets.chomp
+game.secret_word = game.secret_word.split('')
 
 letter = []
 guess.each do |x|
