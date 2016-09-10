@@ -3,11 +3,12 @@ class Santa
 attr_reader :ethnicity
 attr_accessor :gender, :age, :name 
 
-def initialize(gender, ethnicity, name)
+def initialize(name, gender, ethnicity)
 	puts "Initializing Santa instance ..."
 	@gender = gender
 	@ethnicity = ethnicity
 	@age = 0
+	@name = name 
 end
 
 def speak
