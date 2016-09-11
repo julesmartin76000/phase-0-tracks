@@ -1,38 +1,59 @@
 # game class
 
 class WordGame
-  attr_accessor :secret_word
+  attr_accessor :secret_word, :guess_word
   attr_reader :guess_count
   
   def initialize
     @secret_word = secret_word
+    @guess_word = []
     @guess_count = 2
   end
   
- def letter_match?(letter)
-    if @secret_word.include?(letter)
-      return true
-    else return false
-    end
-  end
+ #def letter_match(letter)
+    #if @secret_word.include?(letter)
+    #  return true
+    #else return false
+   # end
+  #end
   
-  def require_word
-  end
+def letter_match(x)
+    @secret_word.each_with_index do |character, i|
+        if character == x.downcase
+            @secret_word[i] = x.downcase
+            @guess_word << secret_word[i]
+            p @guess_word
+        else
+        end
+    end
+end
 
 end
 
 # user interface
+
+tries = 3
 
 puts "Welcome to the Hangman game"
 game = WordGame.new 
 puts "Pick a word randomly please"
 game.secret_word = gets.chomp
 game.secret_word = game.secret_word.split('')
+progress = ["_ " * game.secret_word.length]
+puts "Player 2, guess a letter: "
 
-letter = []
-guess.each do |x|
-	if game.include?()
+while tries = game.secret_word.length
+letter = gets.chomp 
+if game.secret_word.include?(letter)
+  game.letter_match(letter)
+  puts "You guessed one letter!"
+else
+        puts "Nope, sorry."
+        tries += 1
+        puts "You have " + (10 - tries).to_s + " left"
+    end
 end
+
 
 
 ####### example working
