@@ -5,32 +5,15 @@ i=1
 while i<=employee 
 
 	puts "what is your name ?"
-	name =gets.chomp
-	puts "what is the current year ?"
-	year =gets.chomp.to_i
+	name = gets.chomp
 	puts "How old are you ?"
-	age =gets.chomp.to_i
+	age = gets.chomp.to_i
 	puts "What year were you born?"
-	born =gets.chomp.to_i
+	born = gets.chomp.to_i
 	puts "Our company cafeteria serves garlic bread. Should we order some for you ? (y/n)"
-	garlic_bread =gets.chomp
+	garlic_bread = gets.chomp
 	puts "Would you like to enroll in the company’s health insurance ? (y/n)"
-	insurance =gets.chomp
-
-
-
-	if name =="Drake Cula"
-		true_name= false 
-	elsif name == "Tu Fang"
-		true_name= false
-	else true_name= true
-	end 
-	
-	if age == year - born
-		wolves_live_less=true
-	else
-		wolves_live_less=false
-	end
+	insurance = gets.chomp
 	
 	if garlic_bread == "y"
 		wolves_like_garlic = true
@@ -48,7 +31,6 @@ while i<=employee
 
 	until sunshine
 		puts "Do you have any allergie ? (one at a time, type done when finished)"
-		
 		allergies = gets.chomp
 		if allergies == "done"
 		sunshine = true
@@ -59,21 +41,24 @@ while i<=employee
 		end
 	end 
 
-	if wolves_live_less && wolves_like_garlic && wolves_need_insurance
+if (name == "Drake Cula") || (name == "Tu Fang")
+	puts "Definitely a vampire"
+else
+	if (age + born == 2016) && wolves_like_garlic && wolves_need_insurance
 		puts "Probably not a vampire."
-	elsif wolves_like_garlic || wolves_need_insurance || sunshine
+	elsif (age + born) != 2016 || wolves_need_insurance || sunshine
 		puts "Probably a vampire."
 	elsif 
-		puts "Almost certainly a vampire."
-	else name 
-		puts "Almost certainly a vampire."
+		puts "Results inconclusive."
 	end 
+end
+
 i+=1 
 end
 
 puts "Name : #{name} "
 puts "Age : #{age}"
-puts "DO you want some garlic breads ? :#{garlic_bread}"
+puts "Do you want some garlic breads ? :#{garlic_bread}"
 puts "Do you have any allergies ? :#{allergies}"
 puts "Do you want an insurance ? :#{insurance}"
 
