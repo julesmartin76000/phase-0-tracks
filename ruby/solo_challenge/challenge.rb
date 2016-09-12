@@ -1,3 +1,5 @@
+### My program doesn't work but it's the best thing I was able to do by myself.
+
 # game class
 
 class WordGame
@@ -6,33 +8,25 @@ class WordGame
   
   def initialize
     @secret_word = secret_word
-    @guess_word = []
+    @guess_word = ["-", "-", "-", "-", "-"]
     @guess_count = 2
   end
-  
- #def letter_match(letter)
-    #if @secret_word.include?(letter)
-    #  return true
-    #else return false
-   # end
-  #end
+ 
   
 def letter_match(x)
+  @x = x
     @secret_word.each_with_index do |character, i|
-        if character == x.downcase
-            @secret_word[i] = x.downcase
-            @guess_word << secret_word[i]
+       if character == x.downcase 
+         @secret_word[i] = x.downcase
+            guess_word[i] = x
+            end
             p @guess_word
-        else
-        end
     end
 end
 
 end
-
 # user interface
 
-tries = 3
 
 puts "Welcome to the Hangman game"
 game = WordGame.new 
@@ -41,71 +35,21 @@ game.secret_word = gets.chomp
 game.secret_word = game.secret_word.split('')
 progress = ["_ " * game.secret_word.length]
 puts "Player 2, guess a letter: "
+tries = 0
 
 while tries = game.secret_word.length
 letter = gets.chomp 
 if game.secret_word.include?(letter)
   game.letter_match(letter)
+  
   puts "You guessed one letter!"
+  puts "Guess another letter buddy"
 else
         puts "Nope, sorry."
         tries += 1
-        puts "You have " + (10 - tries).to_s + " left"
+        puts "You have " + (game.secret_word.length - tries).to_s + " left"
     end
 end
 
-
-
-####### example working
-
-word = nil      #no word or letters yet
-tries = 0       #setting the tries to zero
-letter = nil 
-
-puts "This is a game for 2. Player 1 writes which word they want player 2 to guess."
-puts "Player 1, write a word: "
-word = gets.chomp
-letters = []
-letters = word.split(//)
-progress = ["_ " * letters.length]
-puts progress
-puts "Player 2, guess a letter: "
-
-
-def check_and_print(letters, guessed)
-  won = true
-
-  # Print letters accordingly
-  letters.each do |l|
-    if guessed.include? l
-      print l
-    else
-      print '_ '
-      won = false
-    end
-  end
-
-  # Insert a line break
-  puts ""
-
-  return won
-end
-
-while tries < 10 || letters.length == 0
-    letter = gets.chomp
-    if letters.include? letter
-        puts "You guessed one letter!"
-        guessed << letter
-        won = check_and_print(letters, guessed)
-
-        # Check if the user won
-        if won
-          puts "You won!!"
-          break
-        end
-    else
-        puts "Nope, sorry."
-        tries += 1
-        puts "You have " + (10 - tries).to_s + " left"
-    end
-end
+    
+    
