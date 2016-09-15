@@ -79,3 +79,41 @@ instances.each do |teach|
 	teach.rollcall
 	teach.assign_homework(10)
 end
+
+## Second method, clearer 
+
+
+class Cat
+
+  def initialize
+    "Producing a Kitten..."
+  end
+
+  def purr(times)
+    times.times do
+      puts "Purrrrrrr"
+    end
+  end
+
+  def chase(object)
+    puts "*chases #{object}*"
+  end
+
+end
+
+
+
+kitty_array = []
+
+5.times do
+
+  kitty_array << Cat.new
+
+end
+
+kitty_array.each do |cat_instance|
+
+  cat_instance.purr(2)
+  cat_instance.chase("mouse")
+
+end

@@ -1,3 +1,5 @@
+#Method 1 : my method 
+
 def vowel_adv(str)
 #create 2 arrays, one with the vowels, the other with the consonants
   vowels = ["a", "e", "i", "o", "u", "a", " ", " "]
@@ -25,3 +27,29 @@ puts "What are your first and last name ?"
 name = gets.chomp
 
 vowel_adv(name).split.each{|i| i.capitalize!}.join(' ')
+
+#Method 2 simpler 
+
+#Ask user for one or more names. When user type quit - loop ends.
+puts "You all are in process of changing your names into incognito names."
+name_array =[]
+loop do
+	puts "Please, provide some of your real names (type 'quit' when done):"	
+	name = gets.chomp.downcase
+	name_array << name
+	break if name == "quit"
+end
+#return an array		
+name_array
+#ierate through given array. Change vowels and consonats in a string	
+		name_array.each { |name|
+		name.tr!("aeiou", "eioua") 
+ 		name.tr!("bcdfghjklmnpqrstvwxyz", "cdfghjklmnpqrstvwxyzb")
+		}
+#delete last value from the array (word "done")
+name_array.delete_at(-1)
+#set values in a context
+name_array.each do |name|
+	puts "Your new name is #{name.upcase.split.reverse.join(' ')}!"
+end
+
