@@ -29,7 +29,7 @@ console.log(longestWord(array));
 
 // Have two hashes as inputs 
 // 
-//loop through the hashes (loop through the key values)
+// loop through the hashes (loop through the key values)
 // Conditionnal statement : if one of the key are the sames, the return is true
 
 var hash_first = {name: 'Spot', 'age': 3, isGoodDog: true};
@@ -52,23 +52,19 @@ coincidence(hash_first, hash_second);
 // loop through each item of the array
 // pick a letter randomly ten times 
 
-// create a function that take an integer as input
-// The input gives the length of the array
-// loop through each item of the array
-// pick a letter randomly ten times 
 
 function random(integer) {
 	var array = [];
-	array = integer.length;
+	var alphabet = "abcdefghijklmnopqrstuvwxyz";
+	//array = integer.length;
 	for (var i = 0; i < array.length; i++) {
-		array[i] = Math.floor((Math.random() * 10) + 1).length;
-		array[i] << k
+		array[i].length = Math.floor((Math.random() * 10) + 1);
+		array[i] << alphabet.charAt(Math.floor(Math.random() * alphabet.length));
 	}
+	return array
 }
 
-random()
-
-
+random(3)
 
 
 
