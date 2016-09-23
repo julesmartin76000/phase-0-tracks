@@ -32,6 +32,11 @@ console.log(longestWord(array));
 // loop through the hashes (loop through the key values)
 // Conditionnal statement : if one of the key are the sames, the return is true
 
+
+// what is keys ==> I have to define this ////////////////////////////////////////
+// can't use length 
+// How to iterate through the keys of an object ///////////////////////////////////
+
 var hash_first = {name: 'Spot', 'age': 3, isGoodDog: true};
 var hash_second = {name: 'john', 'age': 3, isGoodDog: false};
 
