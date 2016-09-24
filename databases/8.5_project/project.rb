@@ -1,6 +1,7 @@
 # require gems
 require 'sqlite3'
 require 'faker'
+require 'pry'
 
 # create SQLite3 database : city where it's cool to run 
 db = SQLite3::Database.new("running.db")
@@ -17,32 +18,36 @@ CREATE TABLE IF NOT EXISTS running(
  ) 
 SQL
 
-#create a running table 
 db.execute(create_table_cmd)
 
-# add a test running
-#db.execute("INSERT INTO running (city_name, stars) VALUES ('San Francisco', 5)")
+def store_city(db)
+	puts "What's your favourite city for running?"
+    name = gets.chomp.downcase
+    puts "How do you rank it ? (1 to 5 stars)"
+    stars = gets.chomp.to_i
+db.execute("INSERT INTO running (city_name, stars) VALUES (?, ?)", name, stars)
 
-def store_city(db, city_name, stars)
-	db.execute("INSERT INTO running (city_name, stars) VALUES (?, ?)", [city_name, stars])
-	#db.execute("SELECT * FROM running")
+	puts "#{name} has #{stars} stars"
+	running = db.execute("select*from running;")
+	running.each do |run|
+	puts "#{run['city_name']} has #{run['stars']} stars."
+end 
+	
 end 
 
-10.times do 
-	store_city(db, Faker::Address.city, 3)
-end 
+store_city(db)
+
+
+#10.times do 
+#	store_city(db, Faker::Address.city, 3)
+#end 
 
 # explore ORM by retrieving data
 #running = db.execute("SELECT * FROM running")
-#running.each do |run|
-#	puts "#{run['city_name']} has #{run['stars']} stars."
-#end 
+
 
 ###### The purpose is to ask for the datas to an user and save 
 ###### the number of stars to create a ranking
-
-
-
 
 
 
