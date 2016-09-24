@@ -1,3 +1,16 @@
+sqlite> .schema
+CREATE TABLE students (
+id INTEGER PRIMARY KEY,
+name VARCHAR(255),
+age INT,
+class_id VARCHAR(255),
+FOREIGN KEY (class_id) REFERENCES classes(id)
+);
+CREATE TABLE classes (
+id INTEGER PRIMARY KEY,
+name VARCHAR(255)
+);
+
 1/ Display the information in one table
 
 sqlite> SELECT * FROM students;
@@ -15,4 +28,25 @@ sqlite> SELECT * FROM students;
 3|François|22|Normal
 4|Paul|22|Star
 
-3/ 
+3/ Display the information in both tables using one query.
+
+sqlite> select*from students, classes WHERE students.class_id=classes.id;
+1|Jules|23|1|1|Star
+2|Anna|21|2|2|Normal
+3|François|22|2|2|Normal
+4|Paul|22|1|1|Star
+
+4/ Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+select students.name, classes.name FROM students JOIN classes ON students.class_id=classes.id;
+Jules|Star
+Anna|Normal
+François|Normal
+Paul|Star
+
+5/ Delete an item that meets some condition
+
+sqlite> DELETE FROM students WHERE class_id=2;
+sqlite> select*from students;
+1|Jules|23|1
+4|Paul|22|1
