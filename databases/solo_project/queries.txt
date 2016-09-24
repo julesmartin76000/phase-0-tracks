@@ -1,0 +1,18 @@
+1/ Display the information in one table
+
+sqlite> SELECT * FROM students;
+1|Jules|23|Star
+2|Anna|21|Normal
+3|François|22|Normal
+4|Paul|22|Normal
+
+2/ Update an item that meets some condition
+
+sqlite> UPDATE students SET class_id="Star" WHERE name="Paul";
+sqlite> SELECT * FROM students;
+1|Jules|23|Star
+2|Anna|21|Normal
+3|François|22|Normal
+4|Paul|22|Star
+
+3/ 
