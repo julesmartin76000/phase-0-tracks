@@ -40,15 +40,16 @@ console.log(longestWord(array));
 var hash_first = {name: 'Spot', 'age': 3, isGoodDog: true};
 var hash_second = {name: 'john', 'age': 3, isGoodDog: false};
 
-function coincidence(hash_1, hash_2) {
-for (var i = 0; i < hash_1.length; i++) {
-	if (hash_1[keys[i]] == hash_2[keys[i]])
-{	console.log(hash_1); }
-	else false ;
-}
+function comparison(one, two){
+   for (var i in one) {
+           if (! two.hasOwnProperty(i) || one[i] !== two[i] ) {
+              return true;
+           }       
+   }
+   return false;
 }
 
-coincidence(hash_first, hash_second);
+comparison(hash_first, hash_second)
 
 // Release 2
 
