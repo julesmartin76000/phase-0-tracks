@@ -40,15 +40,18 @@ console.log(longestWord(array));
 var hash_first = {name: 'Spot', 'age': 3, isGoodDog: true};
 var hash_second = {name: 'john', 'age': 3, isGoodDog: false};
 
-function coincidence(hash_1, hash_2) {
-for (var i = 0; i < hash_1.length; i++) {
-	if (hash_1[keys[i]] == hash_2[keys[i]])
-{	console.log(hash_1); }
-	else false ;
-}
+function comparison(one, two){
+   for (var i in one) {
+           if (! two.hasOwnProperty(i) || one[i] !== two[i] ) {
+              return true;
+           }       
+   }
+   return false;
 }
 
-coincidence(hash_first, hash_second);
+comparison(hash_first, hash_second)
+
+// Use Object.key function ??
 
 // Release 2
 
@@ -58,18 +61,20 @@ coincidence(hash_first, hash_second);
 // pick a letter randomly ten times 
 
 
-function random(integer) {
-	var array = [];
-	var alphabet = "abcdefghijklmnopqrstuvwxyz";
-	//array = integer.length;
-	for (var i = 0; i < array.length; i++) {
-		array[i].length = Math.floor((Math.random() * 10) + 1);
-		array[i] << alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-	}
-	return array
+function makeid()
+{
+    var text = "";
+    var array = []
+    var possible = "abcdefghijklmnopqrstuvwxyz";
+
+    for( var i=0; i < 5; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+        array.push(text)
+
+    return array;
 }
 
-random(3)
+makeid(Math.floor(Math.random() *10));
 
 
 
