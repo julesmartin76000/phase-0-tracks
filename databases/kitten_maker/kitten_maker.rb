@@ -19,7 +19,7 @@ create_table_cmd = <<-SQL
   )
 SQL
 
-# create a kittens table (if it's not there already)
+#create a kittens table (if it's not there already)
 db.execute(create_table_cmd)
 
 # add a test kitten
