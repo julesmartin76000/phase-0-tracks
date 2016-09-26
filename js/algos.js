@@ -51,6 +51,8 @@ function comparison(one, two){
 
 comparison(hash_first, hash_second)
 
+// Use Object.key function ??
+
 // Release 2
 
 // create a function that take an integer as input
@@ -59,18 +61,20 @@ comparison(hash_first, hash_second)
 // pick a letter randomly ten times 
 
 
-function random(integer) {
-	var array = [];
-	var alphabet = "abcdefghijklmnopqrstuvwxyz";
-	//array = integer.length;
-	for (var i = 0; i < array.length; i++) {
-		array[i].length = Math.floor((Math.random() * 10) + 1);
-		array[i] << alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-	}
-	return array
+function makeid()
+{
+    var text = "";
+    var array = []
+    var possible = "abcdefghijklmnopqrstuvwxyz";
+
+    for( var i=0; i < 5; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+        array.push(text)
+
+    return array;
 }
 
-random(3)
+makeid(Math.floor(Math.random() *10));
 
 
 
