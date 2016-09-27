@@ -61,20 +61,26 @@ comparison(hash_first, hash_second)
 // pick a letter randomly ten times 
 
 
-function makeid()
-{
-    var text = "";
-    var array = []
-    var possible = "abcdefghijklmnopqrstuvwxyz";
+function makeid(integer) {
+    
+    var array = [];
+    var alphabet = "abcdefghijklmnopqrstuvwxyz";
+    
+    for( var j=0; j < integer; j++){
+      var text = "";
 
-    for( var i=0; i < 5; i++ )
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-        array.push(text)
+    for( var i=0; i < Math.floor(Math.random() *10); i++ ){
+        text += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+      
+    }
+        array.push(text);
+        
+    }
 
     return array;
 }
 
-makeid(Math.floor(Math.random() *10));
+makeid(3);
 
 
 
