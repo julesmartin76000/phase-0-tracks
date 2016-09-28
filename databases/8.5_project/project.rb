@@ -39,6 +39,14 @@ end
 
 store_city(db)
 
+# create another table of cities 
+# in the user interface : "what city do you want to rank"
+# if it's a new city, scan the database, create a new city
+# if the city already exists in the table, instead of creating a new city, pull the city id from the cities table and
+# insert into running
+# create a method to take the average of each cities.
+
+#create a city table allow to be more clear
 
 
 
