@@ -44,3 +44,27 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+# release 0
+
+get '/contact' do 
+  "I am living in France"
+end 
+
+# the request in the browser is : http://localhost:9393/great_job?name=Jules
+get '/great_job'do
+ name = params[:name]
+ if name 
+   "Good job, #{name}!"
+ else 
+   "Good job!"
+ end
+end
+
+get '/:parameter_1/plus/:parameter_2' do 
+  parameter_1 = params[:parameter_1].to_i
+  parameter_2 = params[:parameter_2].to_i
+  result = parameter_1 + parameter_2
+  result.to_s
+end 
+
