@@ -68,3 +68,13 @@ get '/:parameter_1/plus/:parameter_2' do
   result.to_s
 end 
 
+# release 1 
+# 1/ Volt // Ruby on rails.
+# 2/ ActiveRecord // Datamapper
+# 3/ What is a Web stack ? 
+# A Web stack is the collection of software required for Web development. 
+# At a minimum, a Web stack contains an operating system (OS), a programming language, 
+# database software and a Web server.
+# LAMP is one commonly used Web stack. It uses Linux as the operating system, Apache as the Web server, 
+# MySQL as the relational database management system and PHP as the object-oriented scripting language.  
+
